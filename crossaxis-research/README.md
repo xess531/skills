@@ -1,4 +1,4 @@
-# Deep Research — 横纵分析法深度研究 Skill
+# CrossAxis Research — 横纵分析法深度研究 Skill
 
 一个让 AI Agent 自动产出万字级深度研究报告的 Skill。
 
