@@ -58,6 +58,7 @@ cat > "$SKETCH_DIR/$SKETCH_NAME.ino" << 'FIRMWARE'
 #include "esp_wifi.h"
 
 const char* AP_SSID = "HUAWEI-wulab";
+const char* AP_PASSWORD = "12345678";
 const int AP_CHANNEL = 1;
 uint8_t TARGET_BSSID[] = {0xA2, 0xA9, 0x9A, 0x9C, 0xE6, 0xE6};
 
@@ -67,7 +68,7 @@ void setup() {
     Serial.begin(115200);
     delay(3000);
     WiFi.mode(WIFI_AP);
-    WiFi.softAP(AP_SSID, "", AP_CHANNEL, 0, 4);
+    WiFi.softAP(AP_SSID, AP_PASSWORD, AP_CHANNEL, 0, 4);
     delay(1000);
     esp_wifi_set_mac(WIFI_IF_AP, TARGET_BSSID);
     delay(200);
